@@ -10,6 +10,10 @@ A web-based platform for organizing campus recruitment workflows. The system bri
 - Record placement results
 - Register and log in to the system
 
+## Teamwork and Coordination
+
+The system supports coordinated placement activities by keeping key recruitment information in one workflow. Student and company records provide a shared reference point, while application, interview, and result records help the placement process stay organized from opportunity through outcome. This makes it easier for the people involved in placement activities to follow progress and keep information consistent.
+
 ## Technology Stack
 
 - Java, JSP, and Servlets
