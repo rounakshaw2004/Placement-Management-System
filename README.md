@@ -69,6 +69,16 @@ The repository includes a packaged web archive at `target/PlacementMS.war`. Depl
 
 Before using database-backed features, configure the application’s MySQL connection details and prepare the expected database tables. This repository does not currently include a database schema or a documented credentials file; use your local development configuration and do not commit real credentials.
 
+## Security
+
+This is an academic project and has not been security-audited for production use. The current registration flow accepts a role from the submitted form, including `admin`; do not expose an instance to untrusted users or use real student, company, or account data until role assignment and access checks have been reviewed and hardened. Keep database credentials out of source control, and use HTTPS for any hosted deployment.
+
+If you discover a security issue, avoid posting exploit details or personal data in a public issue. Contact the repository owner privately so it can be reviewed.
+
+## License
+
+This repository does not currently include a `LICENSE` file, so it is not published under an open-source license. All rights remain with the project owner; ask for permission before redistributing or reusing the project. Third-party libraries included with the application retain their own licenses; check their upstream terms before redistribution.
+
 ## Project contents
 
 ```text
