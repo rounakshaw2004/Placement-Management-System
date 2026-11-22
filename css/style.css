@@ -33,10 +33,10 @@ body {
 
 /* ---- TOPBAR ---- */
 .topbar {
-    background: var(--primary);
+    background: linear-gradient(105deg, #102b45 0%, #1a3c5e 58%, #20516f 100%);
     color: #fff;
-    padding: 0 24px;
-    height: 54px;
+    padding: 0 28px;
+    height: 68px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,31 +45,81 @@ body {
     left: 0;
     right: 0;
     z-index: 100;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(126, 207, 239, 0.24);
+    box-shadow: 0 4px 18px rgba(11, 35, 57, 0.2);
 }
 
 .topbar .brand {
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
     color: #fff;
 }
 
-.topbar .brand span {
-    color: #7ecfef;
+.topbar .brand-mark {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #7ecfef, #2e7d9b);
+    color: #102b45;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    box-shadow: 0 5px 14px rgba(46, 125, 155, 0.28);
+}
+
+.topbar .brand-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.topbar .brand-copy strong {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.topbar .brand-copy strong span {
+    color: #a8dcf1;
+}
+
+.topbar .brand-copy small {
+    color: #a8c8e0;
+    font-size: 11px;
+    letter-spacing: 0.35px;
 }
 
 .topbar .top-info {
-    font-size: 12px;
-    color: #a8c8e0;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    border: 1px solid rgba(190, 224, 242, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #d5e8f4;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+}
+
+.top-info-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #64d6a2;
+    box-shadow: 0 0 0 3px rgba(100, 214, 162, 0.12);
 }
 
 /* ---- LAYOUT ---- */
 .wrapper {
     display: flex;
-    margin-top: 54px;
-    min-height: calc(100vh - 54px);
+    margin-top: 68px;
+    min-height: calc(100vh - 68px);
 }
 
 /* ---- SIDEBAR ---- */
@@ -78,7 +128,7 @@ body {
     background: var(--primary);
     color: #c5d9e8;
     position: fixed;
-    top: 54px;
+    top: 68px;
     left: 0;
     bottom: 0;
     overflow-y: auto;
@@ -412,4 +462,14 @@ textarea { resize: vertical; min-height: 80px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .form-grid { grid-template-columns: 1fr; }
     .form-grid.three { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .topbar { padding: 0 14px; }
+    .topbar .brand { gap: 9px; }
+    .topbar .brand-mark { width: 36px; height: 36px; }
+    .topbar .brand-copy strong { font-size: 13px; }
+    .topbar .brand-copy small { font-size: 10px; }
+    .topbar .top-info { padding: 7px 9px; font-size: 0; }
+    .topbar .top-info-dot { width: 8px; height: 8px; }
 }

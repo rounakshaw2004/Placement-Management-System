@@ -10,8 +10,14 @@
 <body>
 
 <div class="topbar">
-    <a href="${pageContext.request.contextPath}/index.jsp" class="brand">Placement<span>MS</span></a>
-    <span class="top-info">Placement Management System</span>
+    <a href="${pageContext.request.contextPath}/index.jsp" class="brand" aria-label="Placement Management System home">
+        <span class="brand-mark" aria-hidden="true">PM</span>
+        <span class="brand-copy">
+            <strong>Placement <span>Management System</span></strong>
+            <small>Campus Recruitment Portal</small>
+        </span>
+    </a>
+    <div class="top-info"><span class="top-info-dot" aria-hidden="true"></span>Placement Operations</div>
 </div>
 
 <div class="wrapper">
